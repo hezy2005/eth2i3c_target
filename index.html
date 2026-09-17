@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eth2i3c_target</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        .error {
+            color: #b42318;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main id="readme" class="markdown-body">
+        <p>正在加载 README.md…</p>
+    </main>
+
+    <script type="module">
+        import { marked } from "https://cdn.jsdelivr.net/npm/marked@15.0.7/lib/marked.esm.js";
+
+        const readme = document.getElementById("readme");
+
+        try {
+            const response = await fetch("README.md");
+
+            if (!response.ok) {
+                throw new Error(`README.md 加载失败：HTTP ${response.status}`);
+            }
+
+            const markdown = await response.text();
+            readme.innerHTML = marked.parse(markdown);
+        } catch (error) {
+            readme.innerHTML = `<p class="error">无法加载 README.md：${error.message}</p>`;
+        }
+    </script>
+</body>
+</html>
