@@ -1,6 +1,6 @@
 # eth2i3c_target：基于 STM32H563 的 I3C Target 寄存器模型
 
-`eth2i3c_target` 是运行在 STM32H563 上的 I3C Target 测试固件，用于配合
+<a href="https://github.com/hezy2005/eth2i3c_target"><code>eth2i3c_target</code></a> 是运行在 STM32H563 上的 I3C Target 测试固件，用于配合
 [eth2i3c](https://github.com/hezy2005/eth2i3c) Controller 完成端到端通信验证。
 
 项目基于 STM32H5 I3C LL 驱动和中断机制，实现动态地址分配、private transfer 以及一个简单、可预测的
