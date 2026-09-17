@@ -87,8 +87,9 @@ current address 按实际传输字节数前移。
 | 系统时钟 | 250 MHz |
 | I3C 外设 | I3C1 Target 模式 |
 | I3C 速率 | 12.5 MHz，由 Controller 提供时钟 |
-| SCL | PB8；Arduino D15 / CN6 pin 2；Morpho CN5 pin 3 |
-| SDA | PB9；Arduino D14 / CN6 pin 4；Morpho CN5 pin 5 |
+| SCL | PB8；CN7 pin 2 |
+| SDA | PB9；CN7 pin 4 |
+| GND | CN7 pin 8 |
 
 Controller 和 Target 必须共地，I3C 连线应尽量短。信号质量不理想时，可分别使用一根地线与 SCL、SDA
 绞合。板卡接口和跳线信息可参考 ST 的
